@@ -49,6 +49,7 @@ class Diamond{
 		let direction = false; 		//False: Negative || True: Positive
 
 		let animation = () => {
+			console.clear();
 			this.show();
 			this.constructDiamond(this.letter, this.lines, intSpaces);
 
@@ -58,10 +59,9 @@ class Diamond{
 			if(direction) intSpaces += 1;
 			else intSpaces -= 1;
 
-			setTimeout(console.clear, 250);
 		}
 
-		this.animationPID = setInterval(animation, 500);
+		this.animationPID = setInterval(animation, 60/1);
 	}
 
 	stopAnimation(){
